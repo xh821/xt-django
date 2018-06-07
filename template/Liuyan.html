@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+<title>留言板</title>
+<link href="{% static 'css/style1.css' %}" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Pink Contact Form ,Login Forms,Sign up Forms,Registration Forms,News latter Forms,Elements"./>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<!--webfonts-->
+<!--//webfonts-->
+</head>
+<body>
+	<h1>留 言 板</h1>
+	<div class="login-01">
+			<form action="Liuyan" method="post">
+				<ul>
+				<li class="first">
+					<a href="#" class=" icon user"></a><input type="text" class="text"  name="name" placeholder="姓名" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Name';}" >
+					<div class="clear"></div>
+				</li>
+				<li class="first">
+					<a href="#" class=" icon email"></a><input type="text" class="text" name="email" placeholder="邮箱地址" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Email';}" >
+					<div class="clear"></div>
+				</li>
+				<li class="first">
+					<a href="#" class=" icon phone"></a><input type="text" class="text" name="phone" placeholder="联系方式" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Phone';}" >
+					<div class="clear"></div>
+				</li>
+				<li class="second">
+				<a href="#" class=" icon msg"></a><textarea placeholder="留言内容" name="text" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Comments';}">Comments</textarea>
+				<div class="clear"></div>
+				</li>
+			</ul>
+			<input type="submit" onClick="myFunction()" value="提交" >
+			<div class="clear"></div>
+		</form>
+</div>
+	<!--start-copyright-->
+   		<div class="copy-right">
+   			<div class="wrap">
+				<p>Copyright &copy; 2018.Company name All rights reserved.<a target="_blank" href=""></a></p>
+		</div>
+	</div>
+	<!--//end-copyright-->
+</body>
+</html>

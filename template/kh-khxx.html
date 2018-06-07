@@ -1,0 +1,338 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>客户增加</title>
+{% load static %}
+<style>
+html,body,div,span,ul,li,h1,h2,h3,h4,p,a,img,input,form{margin:0;padding:0;border:0;list-style:none;outline:0;}
+div,td,ul,li,dl,dt,dd,h2,h3,h4{list-style:none;margin:0;padding:0;}
+div{display:block;}
+body{font-size:12px;font-family:"微软雅黑", "宋体", Arial;color:#666;}
+li{display:list-item;text-align:-webkit-match-praent;}
+img{vertical-align:middle;}
+em{font-style:normal;color:#fff;}
+input, textarea, select, button { font-family: inherit; font-size: 100%; outline:0;}
+a img{border:0}
+body{color:#333;font:12px "微软雅黑";}
+ul, ol, li{list-style-type:none;vertical-align:0}
+a{outline-style:none;color:#535353;text-decoration:none;cursor:pointer}
+a:hover{text-decoration:none;}
+.clear{height:0;overflow:hidden;clear:both}
+i,s{text-decoration:none;font-style:normal;}
+
+.formborder{border:0px solid #476f9a;}
+.formcap{color:#fff;background:#476f9a;}
+td{font-size:12px;line-height:18px;}
+.form-cap-label{padding:3px 0 0 4px;height:30px;cursor:default;}
+.form-cap-txt{font-size:14px;text-indent:5px;letter-spacing:1px;}
+.formcap-btn{padding-right:5px;}
+.formcap-btn a img{width:15px;height:15px;}
+
+.layoutitem{width:800px;border:1px solid #ddd;margin:15px  auto;}
+.layout-xx{padding:8px;}
+.layout-xx li{height:40px;line-height:40px;margin-bottom:5px;display:block;overflow:hidden;}
+.item-input{float:left;overflow:hidden;display:inline-block;width:50%;}
+.item-label{width:68px;line-height:40px;display:inline-block;text-align:right;}
+.layoutitemcon{width:235px;background:#fff;height:24px;line-height:24px;border:1px solid #c9c9c9;text-indent:5px;margin-left:8px;}
+.layout-sele{width:110px;background:#fff;height:24px;line-height:24px;border:1px solid #c9c9c9;text-align:center;margin-left:8px;}
+.layout-input{width:200px;border:1px solid #c9c9c9;height:24px;line-height:24px;margin-left:8px;text-indent:5px;}
+.item-input1{overflow:hidden;display:inline-block;width:100%;float:left;}
+.layout-bz{width:687px;height:24px;line-height:24px;border:1px solid #c9c9c9;background:#fff;margin-left:8px;text-indent:5px;}
+.lab{text-indent:5px;}
+.item-op{width:238px;height:24px;margin-left:7px;border:1px solid #ddd;}
+.item-label i{color:#ff0303;font-size:14px;line-height:24px;padding-right:5px;}
+.tc-kh{width:50px;}
+.kh{width:70%;}
+.item-ts{margin-top:15px;}
+.layoutitem-add{float:right;padding-right:15px;}
+.layoutitem-add a{width:45px;height:24px;line-height:24px;margin:12px 8px ;display:inline-block;padding:2px 3px;}
+.add{background:#ff0303;color:#fff;border-radius:3px;text-align:center;}
+.bc{background:#f94913;border-radius:3px;text-align:center;color:#fff;}
+.tc{background:#333;border-radius:3px;text-align:center;color:#fff;}
+.gridbar{border:1px solid #ddd;width:100%;clear:both;}
+.gridbar input{padding:1px 3px 1px 3px; margin:0px; border:none;}
+.gridbar th{height:34px;line-height:34px;border-bottom:1px solid #ddd;text-indent:11px;text-align:left;background:#f2f2f2}
+.gridbar td{line-height:35px;text-indent:11px;border-right:1px dotted #ddd;text-align:left;}
+</style>
+ <link  type="text/css" rel="stylesheet"  href="{% static 'css/style.css' %}"/>
+<link  type="text/css" rel="stylesheet"  href="{% static 'css/index.css' %}"/>
+
+
+<script  src="{% static 'js/jquery.min.js' %}"></script>
+<!-- 动态菜单JS -->
+<script type="text/javascript"  src="{% static 'js/menu.js' %}"></script>
+</head>
+
+
+<body>
+<div class="container">
+ <div class="cont-top">
+  <div class="companyname">趣多多</div>
+  <div class="cont-top-middle">
+   <ul>
+    <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon.png' %}">
+      </div>
+       <div class="top-txt">购物单</div>
+     </a>
+    </li>
+
+    <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon1.png' %}">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon1.png' %}">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon1.png' %}">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon1.png' %}">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon1.png' %}">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+
+   </ul>
+  </div>
+  <div class="cont-top-rg">
+   <ul class="advanced-menu">
+    <li>
+     <div class="top-search">
+      <div class="t-s-l">
+       <span class="left-line"></span>
+       <input type="text" value="搜库存" class="search-type" disabled>
+       <span class="triangle-bottom"></span>
+      </div>
+      <div class="t-s-l">
+       <input type="text" placeholder="请输入商品编码或名称" class="search-dt" autocomplete="off">
+       <span class="right-line"></span>
+       <span class="right-icon"><img src="{% static 'img/search-icon.png' %}"></span>
+      </div>
+     </div>
+    </li>
+    <li class="default" style="position:relative;">
+     <span class="user"><img src="{% static 'img/user.png' %}"></span>
+     <a  href="#" class="special">{{username}}</a>
+     <span class="triangle-bottom" style="margin:6px 0 0 10px;"></span>
+     <div class="drop-down-wrap" style="width:180px;left:15px;display: none;">
+      <div class="drop-down">
+       <span class="triangle-border"></span>
+       <span class="triangle-bg"></span>
+       <ul class="del-ul">
+        <li><a href="#" class="hot">趣多多</a></li>
+        <li><a href="#">{{username}}</a></li>
+        <li><a href="#">操作日志</a></li>
+       </ul>
+      </div>
+     </div>
+    </li>
+   </ul>
+   <ul class="advanced-menu">
+    <li>
+     <a href="#"><img  src="{% static 'img/top-icon1.png' %}"></a>
+    </li>
+    <li>
+     <a href="#"><img  src="{% static 'img/top-icon2.png' %}"></a>
+    </li>
+    <li>
+     <a href="{% url 'Liuyan' %}"><img  src="{% static 'img/top-icon3.png' %}"></a>
+    </li>
+    <li>
+     <a href="#"><img  src="{% static 'img/top-icon4.png' %}"></a>
+    </li>
+    <li>
+     <a href="#"><img  src="{% static 'img/top-icon5.png' %}"></a>
+    </li>
+   </ul>
+  </div>
+ </div>
+<div class="left-menu" style="height:949px;">
+  <div class="menu-list">
+   <ul>
+    <li class="menu-list-02">
+     <a href="#">
+     <p class="fumenu">订单管理</p>
+     </a>
+     <a>
+     </a>
+     <a class="list-p">
+      <a href="{% url 'Dindan:dd-ddgl' %}"><p class="fumenu" id="zcd15">订单汇总</p></a>
+      <a href="{% url 'Dindan:dd-zjdd' %}"><p class="fumenu" id="zcd14">增加订单</p></a>
+      <a href="{% url 'Dindan:dd-shdd' %}"><p class="fumenu" id="zcd16">审核订单</p></a>
+     </a>
+     </li>
+    <li class="menu-list-02" >
+     <a href="#">
+     <p class="fumenu">客户管理</p>
+     </a>
+     <a class="list-p">
+      <a href="{% url 'Kehu:khgl' %}"><p class="fumenu" >客户列表</p></a>
+      <a href="{% url 'Kehu:khxx' %}"><p class="fumenu" >增加客户</p></a>
+     </a>
+    </li>
+   </ul>
+  </div>
+ </div>
+
+ <div class="right-menu">
+  <div class="main-hd">
+   <div class="page-teb" >
+    <div class="l-tab-links">
+     <ul style="left:0;">
+      <li class="l-select">
+       <a href="#">首页</a>
+      </li>
+       <li class="l-select">
+       <a href="#">增加客户</a>
+      </li>
+     </ul>
+    </div>
+        <div class="l-tab-content" style="background:#fff;">
+     <div class="tab-content-item">
+<div class="home">
+<form action="khxx" method="post">
+ <table cellpadding="0" cellspacing="0" border="0" class="formborder" style="z-index:99;position:absolute;width:800px;height: 400px; display: block;" >
+  <tbody>
+   <tr>
+   <td align="left" valign="top" style="width:880px;height: auto;background:#fff;">
+    <div class="formcontentsize" style="width:auto;height:auto;">
+  <!--仓库基本信息   开始-->
+
+     <div class="layoutitem">
+      <div class="layout-xx">
+       <ul>
+        <li>
+         <div class="item-input">
+          <label class="item-label"><i>*</i>客户编号</label>
+          <input type="text" class="layoutitemcon" name="khbh">
+         </div>
+          <div class="item-input">
+          <label class="item-label"><i>*</i>客户名称</label>
+          <input type="text" class="layoutitemcon"  name="khmc">
+         </div>
+        </li>
+
+        <li>
+         <div class="item-input">
+          <label class="item-label">客户类型</label>
+          <input type="text" class="layoutitemcon"  name="khlx">
+         </div>
+
+
+         <div class="item-input">
+          <label class="item-label">客户等级</label>
+          <select class="item-op" name="khdj" onchange='(document.getElementById("khdj").value=this.options[this.selectedIndex].value)'>
+          <option value="1" >VIP会员</option>
+          <option value="0" >普通会员</option>
+          </select>
+          <input type="text" id="khdj" name="khdj" value="">
+         </div>
+        </li>
+        <li>
+         <div class="item-input">
+          <label class="item-label">开户银行</label>
+          <input type="text" class="layoutitemcon"  name="khyh">
+         </div>
+         <div class="item-input">
+          <label class="item-label">银行账号</label>
+          <input type="text" class="layoutitemcon"  name="yhzh">
+         </div>
+        </li>
+        <li>
+         <div class="item-input">
+          <label class="item-label">销售人员</label>
+          <input type="text" class="layoutitemcon"  name="xsry">
+         </div>
+        
+        </li>
+       </ul>
+      </div>
+     </div>
+     <!--仓库基本信息   结束-->
+     <!--联系人信息   开始-->
+ 
+    </div>
+   </td>
+   </tr>
+   
+   <tr>
+   <td align="left" valign="top" style="width:880px;height: auto;background:#fff;">
+    <div class="formcontentsize" style="width:auto;height:auto;">
+     <!--仓库基本信息   开始-->
+     <div class="layoutitem">
+
+        <table class="gridbar bar" border="0" cellpadding="0" cellspacing="0">
+        <thead>
+         <tr>
+          <th >联系人</th>
+          <th>手机</th>
+          <th>紧急电话</th>
+          <th>联系地址</th>
+          <th>身份证号</th>
+         </tr>
+         <tr>
+          <td><input type="text" class="cj-bf kh" name="lxr"></td>
+          <td><input type="text" class="cj-bf kh" name="tel"></td>
+          <td><input type="text" class="cj-bf kh" name="tel2"></td>
+          <td><input type="text" class="cj-bf kh" name="dz"></td>
+          <td><input type="text" class="cj-bf kh" name="sfzh"></td>
+         </tr>
+        </thead>
+       </table>
+     </div>
+     <!--仓库基本信息   结束-->
+     <!--联系人信息   开始-->
+     <div class="layoutitem-add">
+   <li> <input type="submit" value="保存" style="width:60px; height:40px;
+      background:#243b97;border-radius:3px;text-align:center;color:#fff;"/>
+      <a href="{% url 'Kehu:khgl' %}"  style="width:60px; height:30px;
+      background:#f90702;border-radius:1px;text-align:center;color:#fff;">退出</a></li>
+     </div>
+    </div>
+   </td>
+   </tr>
+  </tbody>
+ </table>
+</form>
+   </div>
+  </div>
+ </div>
+</div>
+</div>
+ </div>
+</div>
+</body>
+</html>

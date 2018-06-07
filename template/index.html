@@ -1,0 +1,373 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+ {% load static %}
+<title>首页</title>
+<link  type="text/css" rel="stylesheet"  href="{% static 'css/style.css' %}"/>
+<link  type="text/css" rel="stylesheet"  href="{% static 'css/index.css' %}"/>
+<script  src="{% static 'js/jquery.min.js' %}"></script>
+<!-- 动态菜单JS -->
+<script type="text/javascript" src="{% static 'js/menu.js' %}"></script>
+</head>
+
+<body>
+<div class="container">
+ <div class="cont-top">
+  <div class="companyname">柒旗</div>
+  <div class="cont-top-middle">
+   <ul>
+    <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon.png' %}">
+      </div>
+       <div class="top-txt">购物单</div>
+     </a>
+    </li>
+    
+    <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon1.png' %}">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+    
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon1.png' %}">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+    
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon1.png' %}">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+    
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon1.png' %}">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+    
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon1.png' %}">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+   
+   </ul>
+  </div>
+  <div class="cont-top-rg">
+   <ul class="advanced-menu">
+    <li>
+     <div class="top-search">
+      <div class="t-s-l">
+       <span class="left-line"></span>
+       <input type="text" value="搜库存" class="search-type" disabled>
+       <span class="triangle-bottom"></span>
+      </div>
+      <div class="t-s-l">
+       <input type="text" placeholder="请输入商品编码或名称" class="search-dt" autocomplete="off"> 
+       <span class="right-line"></span>
+       <span class="right-icon"><img src="{% static 'img/search-icon.png' %}"></span>
+      </div>
+     </div>
+    </li>
+    <li class="default" style="position:relative;">
+     <span class="user"><img src="{% static 'img/user.png' %}"></span>
+     <a  href="#" class="special"><i><img src="{% static 'img/xl.png' %}"></i></a>
+     <div class="drop-down-wrap" style="width:180px;left:15px;display: none;">
+      <div class="drop-down">
+       <span class="triangle-border"></span>
+       <span class="triangle-bg"></span>
+       <ul class="del-ul">
+        <li><a href="#" class="hot">趣多多</a></li>
+        <li><a href="#">{{username}}</a></li>
+        <li><a href="#">操作日志</a></li>       
+       </ul>
+      </div>
+     </div>
+    </li>    
+   </ul>
+   <ul class="advanced-menu">
+    <li>
+     <a href="#"><img  src="{% static 'img/top-icon1.png' %}"></a>
+    </li>
+    <li>
+     <a href="#"><img  src="{% static 'img/top-icon2.png' %}"></a>
+    </li>
+    <li>
+     <a href="#"><img  src="{% static 'img/top-icon3.png' %}"></a>
+    </li>
+    <li>
+     <a href="#"><img  src="{% static 'img/top-icon4.png' %}"></a>
+    </li>
+    <li>
+     <a href="#"><img  src="{% static 'img/top-icon5.png' %}"></a>
+    </li>
+   </ul>
+  </div>
+ </div>
+
+ <div class="left-menu" style="height:949px;">
+  <div class="menu-list">
+   <ul>
+
+    <li class="menu-list-01" >
+     <a >
+     <p class="fumenu">库房管理</p>
+     </a>
+     <a>
+      <img class="xiala"  src="{% static 'img/xiala.png' %}"/>
+     </a>
+     <div class="list-p">
+      <a href="{% url 'Cangk:ck-rkd' %}"><p class="zcd" id="zcd5">入库单</p></a>
+      <a href="{% url 'Cangk:ck-ckd' %}"><p class="zcd" id="zcd6">出库单</p></a>
+      <a href="{% url 'Cangk:ck-kffp' %}"><p class="zcd" id="zcd7">仓库信息</p></a>
+     </div>
+    </li>
+    
+    <li class="menu-list-02">
+     <a >
+     <p class="fumenu">产品管理</p>
+     </a>
+     <a>
+     <img class="xiala" src="{% static 'img/xiala.png' %}" />
+     </a>
+     <div class="list-p">
+      <a href="{% url 'Chanpin:addsp' %}"><p class="zcd" id="zcd8">产品库存</p></a>
+      <a href="{% url 'Chanpin:addspimg' %}"><p class="zcd" id="zcd9">新增图样</p></a>
+     </div>
+    </li>
+    
+    <li class="menu-list-01" >
+    <a >
+     <p class="fumenu">订单管理</p>
+     </a>
+     <a>
+     <img class="xiala"  src="{% static 'img/xiala.png' %}" />
+     </a>
+     <div class="list-p">
+      <a href="{% url 'Dindan:dd-ddgl' %}"> <p class="zcd" id="zcd10">订单汇总</p></a>
+      <a href="{% url 'Dindan:dd-zjdd' %}"> <p class="zcd" id="zcd11">增加订单</p></a>
+      <a href="{% url 'Dindan:dd-shdd' %}"> <p class="zcd" id="zcd12">审核订单</p></a>
+     </div>
+    </li>
+    
+    <li class="menu-list-02">
+     <a >
+     <p class="fumenu">财务管理</p>
+     </a>
+     <a>
+     <img class="xiala"   src="{% static 'img/xiala.png' %}" />
+     </a>
+     <div class="list-p">
+      <a href="{% url 'Caiwu:cw-ckd' %}"> <p class="zcd" id="zcd13">出款单</p></a>
+      <a href="{% url 'Caiwu:cw-rkd' %}"> <p class="zcd" id="zcd14">收款单</p></a>
+      <a href="{% url 'Caiwu:cw-jslr' %}"> <p class="zcd" id="zcd15">计算利润</p></a>
+     </div>
+    </li>
+    
+    <li class="menu-list-01" >
+    <a>
+     <p class="fumenu">客户管理</p>
+     </a>
+     <a>
+     <img class="xiala"  src="{% static 'img/xiala.png' %}" />
+     </a>
+     <div class="list-p">
+      <a href="{% url 'Kehu:khgl' %}"> <p class="zcd" id="zcd16">客户列表</p></a>
+      <a href="{% url 'Kehu:khxx' %}"> <p class="zcd" id="zcd17">新增客户</p></a>
+     </div>
+    </li>
+    
+    <li class="menu-list-02">
+    <a>
+     <p class="fumenu">员工管理</p>
+     </a>
+     <a>
+     <img class="xiala"  src="{% static 'img/xiala.png' %}"/>
+     </a>
+     <div class="list-p">
+      <a href="{% url 'Yuang:ygxxgl' %}"> <p class="zcd" id="zcd18">员工信息一览表</p></a>
+      <a href="{% url 'Yuang:ygxxadd' %}"> <p class="zcd" id="zcd19">新增员工</p></a>
+     </div>
+    </li>
+   </ul>
+  </div>
+ </div>
+ <div class="right-menu">
+  <div class="main-hd">
+   <div class="page-teb" style="height:887px;">
+    <div class="l-tab-links">
+     <ul style="left:0;">
+      <li class="l-select">
+       <a href="" style="padding:0 25px;">首页</a>
+      </li>
+     </ul>
+    </div>
+    <div class="l-tab-content" style="height:851px;">
+     <div class="tab-content-item">
+      <div class="home">
+      <!--成交金额-->
+       <div class="space-style">
+        <div class="col-xs">
+         <a  href="" class="title-button bg-deep">
+          <div class="carousel">
+           <div class="left-img">
+            <i><img src="{% static 'img/left-img1.png' %}"></i>
+            <p>成交金额</p>
+           </div>
+           <div class="right-info">{{cjje}}</div>
+          </div>
+         </a>
+        </div>
+        
+         <div class="col-xs">
+         <a  href="" class="title-button bg-red">
+          <div class="carousel">
+           <div class="left-img bg-color-red">
+            <i><img src="{% static 'img/left-img2.png' %}"></i>
+            <p>订单</p>
+           </div>
+           <div class="right-info">{{ddzs}}笔</div>
+          </div>
+         </a>
+        </div>
+        
+         <div class="col-xs">
+         <a  href="" class="title-button bg-green">
+          <div class="carousel">
+           <div class="left-img bg-color-green">
+            <i><img src="{% static 'img/left-img3.png'%}"></i>
+            <p>通知</p>
+           </div>
+           <div class="right-info">0条</div>
+          </div>
+         </a>
+        </div>
+        
+         <div class="col-xs">
+         <a  href="" class="title-button bg-orange">
+          <div class="carousel">
+           <div class="left-img bg-color-orange">
+            <i><img src="{% static 'img/left-img4.png' %}"></i>
+            <p>待处理</p>
+           </div>
+           <div class="right-info">0条</div>
+          </div>
+         </a>
+        </div>
+        
+         <div class="col-xs">
+         <a  href="" class="title-button bg-purple">
+          <div class="carousel">
+           <div class="left-img bg-color-purple">
+            <i><img src="{% static 'img/left-img5.png' %}"></i>
+            <p>留言</p>
+           </div>
+           <div class="right-info">{{lys}}条</div>
+          </div>
+         </a>
+        </div>
+        
+         <div class="col-xs">
+         <a  href="" class="title-button bg-yellow">
+          <div class="carousel">
+           <div class="left-img bg-color-yellow">
+            <i><img src="{% static 'img/left-img6.png' %}"></i>
+            <p>紧急通知</p>
+           </div>
+           <div class="right-info">0条</div>
+          </div>
+         </a>
+        </div>
+       </div>
+       
+       <!--折线图-->
+       <div class="home-goods panel">
+        <div class="home-mychart" style="height:400px;overflow:hidden;">
+         <p>销售对比分析</p>
+         <img src="{% static 'img/chart.png' %}">
+        </div>
+       </div>
+       
+       <!--销售情况-->
+       <div class="order-form">
+        <div class="col-xs-3 col-lg-7">
+         <div class="admin-info">
+          <div class="title-name">
+           <i></i>
+            登录记录
+           <a href="#">+更多</a>
+          </div>
+          <table class="record-list">
+           <tbody>
+           {% for id in lginfo %}
+            <tr>
+             <td>{{id.username}}</td>
+             <td>{{id.last_login}}</td>
+            </tr>
+           {% endfor %}
+           </tbody>
+          </table>
+         </div>
+        </div>
+        
+        <div class="col-xs-6 ranking-style">
+         <div class="frame">
+          <div class="title-name">
+            <i></i>
+            商品销售排行
+           <a href="#">+更多</a>
+          </div>
+          <table class="table table-list">
+           <thead>
+            <tr>
+             <th width="50">排名</th>
+             <th>商品编号</th>
+             <th>商品名称</th>
+             <th width="80">销售数量</th>
+            </tr>
+           </thead>
+           <tbody>
+           {% for id in CKD %}
+            <tr>
+             <td>
+              <em>{{id.id}}</em>
+             </td>
+             <td>{{id.spid}}</td>
+             <td><a href="#">{{id.spname}}</a></td>
+             <td>{{id.num}}</td>
+            </tr>
+           {% endfor %}
+           </tbody>
+          </table>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+</body>
+</html>

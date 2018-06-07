@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+ {% load static %}
+<title>产品</title>
+<link  type="text/css" rel="stylesheet"  href="{% static 'css/style.css' %}"/>
+<link  type="text/css" rel="stylesheet"  href="{% static 'css/index.css' %}"/>
+<script type="text/javascript"  src="{% static 'js/menu.js' %}"></script>
+<style>
+</style>
+</head>
+
+
+<body>
+
+<div class="container">
+ <div class="cont-top">
+  <div class="companyname">柒 旗</div>
+  <div class="cont-top-middle">
+   <ul>
+    <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon.png' %}">
+      </div>
+       <div class="{% static 'top-txt' %}">购物单</div>
+     </a>
+    </li>
+
+    <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon1.png' %}">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon1.png' %}">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon1.png' %}">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon1.png' %}">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon1.png' %}">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+
+   </ul>
+  </div>
+  <div class="cont-top-rg">
+   <ul class="advanced-menu">
+    <li>
+     <div class="top-search">
+      <div class="t-s-l">
+       <span class="left-line"></span>
+       <span class="triangle-bottom"></span>
+      </div>
+      <div class="t-s-l">
+       <span class="right-line"></span>
+       <span class="right-icon"><img src="{% static 'img/search-icon.png' %}"></span>
+      </div>
+     </div>
+    </li>
+    <li class="default" style="position:relative;">
+     <span class="user"><img src="{% static 'img/user.png' %}"></span>
+     <a  href="#" class="special">{{username}}</a>
+     <span class="triangle-bottom" style="margin:6px 0 0 10px;"></span>
+     <div class="drop-down-wrap" style="width:180px;left:15px;display: none;">
+      <div class="drop-down">
+       <span class="triangle-border"></span>
+       <span class="triangle-bg"></span>
+       <ul class="del-ul">
+        <li><a href="#" class="hot">趣多多</a></li>
+        <li><a href="#">小丫头</a></li>
+        <li><a href="#">操作日志</a></li>
+       </ul>
+      </div>
+     </div>
+    </li>
+   </ul>
+   <ul class="advanced-menu">
+    <li>
+     <a href="#"><img  src="{% static 'img/top-icon1.png' %}"></a>
+    </li>
+    <li>
+     <a href="#"><img  src="{% static 'img/top-icon2.png' %}"></a>
+    </li>
+    <li>
+     <a href="{% url 'Liuyan' %}"><img  src="{% static 'img/top-icon3.png' %}"></a>
+    </li>
+    <li>
+     <a href="#"><img  src="{% static 'img/top-icon4.png' %}"></a>
+    </li>
+    <li>
+     <a href="#"><img  src="{% static 'img/top-icon5.png' %}"></a>
+    </li>
+   </ul>
+  </div>
+ </div>
+ <div>
+  <div class="menu-list">
+   <ul>
+        <li class="menu-list-01" >
+      <a href="{% url 'Cangk:ck-kffp' %}">
+     <p class="fumenu">库房管理</p>
+     </a>
+     <div  >
+      <a href="{% url 'Cangk:ck-rkd' %}"><p class="fumenu" >入库单</p></a>
+      <a href="{% url 'Cangk:ck-ckd' %}"><p class="fumenu"  >出库单</p></a>
+      <a href="{% url 'Cangk:ck-kfgl' %}"><p class="fumenu" >仓库信息</p></a>
+     </div>
+    </li>
+    <li class="menu-list-01" >
+      <a href="{% url 'Chanpin:cp-cpgl' %}">
+     <p class="fumenu">产品管理</p>
+     </a>
+     <div >
+      <a href="{% url 'Chanpin:addsp' %}"><p class="fumenu" >增加商品</p></a>
+      <a href="{% url 'Chanpin:addspimg' %}"><p class="fumenu" >新增图样</p></a>
+     </div>
+    </li>
+   </ul>
+  </div>
+ </div>
+
+ <div class="right-menu">
+  <div class="main-hd">
+   <div class="page-teb" >
+    <div class="l-tab-links">
+     <ul style="left:0;">
+      <li class="l-select">
+       <a href="#">首页</a>
+      </li>
+       <li class="l-select">
+       <a href="#">商品信息</a>
+      </li>
+     </ul>
+    </div>
+     <div class="l-tab-content" style="background:#fff;">
+     <div class="tab-content-item">
+      <div class="home">
+
+      <form  action="addsp" method="POST">
+
+        <div class="gys-list">
+         <div class="layoutgr">
+          <ul>
+           <li>
+            <label>商品名称</label>
+            <input type="text"  class="buedit" name="spmc">
+           </li>
+            <li>
+            <label>商品编号</label>
+            <input type="text" class="buedit" name="spbh">
+           </li>
+           <li>
+            <label>品牌</label>
+            <input type="text" class="buedit" name="pp">
+           </li>
+           <li>
+            <label>规格</label>
+            <input type="text" class="buedit" name="gg">
+           </li>
+           <li>
+            <label>型号</label>
+            <input type="text" class="buedit" name="xh">
+           </li>
+            <li>
+            <label>重量</label>
+            <input type="text" class="buedit" name="zl">
+           </li>
+            <li>
+            <label>生产日期</label>
+            <input type="date" class="buedit" name="scsj">
+           </li>
+            <li>
+            <label>保质期</label>
+            <input type="text" class="buedit" name="bzq">
+           </li>
+            <li>
+            <label>保修时间</label>
+            <input type="text" class="buedit" name="bxsj">
+           </li>
+            <li>
+            <label>供货信息</label>
+            <input type="text" class="buedit" name="ghxx">
+           </li>
+            <li>
+            <label>参考成本价</label>
+            <input type="text" class="buedit" name="ckcb">
+           </li>
+            <li>
+            <label>备注</label>
+            <input type="text" class="buedit" name="ps">
+           </li>
+          </ul>
+         </div>
+      </br>
+
+         <div class="grid">
+           <!--仓库基本信息   开始-->
+           <div class="layoutitem" style="width:100%;border:none;">
+
+            <table class="gridbar" border="0" cellpadding="0" cellspacing="0">
+            <thead>
+             <tr>
+              <th scope="col">单位名称</th>
+              <th>单位代码</th>
+              <th>条码</th>
+              <th>零售价</th>
+              <th>预设售价1</th>
+              <th>预设售价2</th>
+              <th>预设售价3</th>
+             </tr>
+             <tr>
+              <td><input type="text" name="dwmc"/></td>
+              <td><input type="text" name="dwdm"/></td>
+              <td><input type="text" name="tm"/></td>
+              <td><input type="text" name="lsj"/></td>
+              <td><input type="text" name="y1"/></td>
+              <td><input type="text" name="y2"/></td>
+              <td><input type="text" name="y3"/></td>
+             </thead>
+            </table>
+
+           </div>
+           <!--仓库基本信息   结束-->
+          </div>
+          <div class="cellspacing">
+           <div class="cell-je">
+            <input type="submit" style="width:60px; height:40px;
+      background:#2d26f9;border-radius:3px;text-align:center;color:#fff;" value="提交"/>
+           </div>
+          </div>
+         </div>
+        </form>
+	   </div>
+
+
+      </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  {% load static %}
+<title>增加订单</title>
+<link  type="text/css" rel="stylesheet"  href="{% static 'css/style.css' %}"/>
+<link  type="text/css" rel="stylesheet"  href="{% static 'css/index.css' %}"/>
+<script  src="{% static 'js/jquery.min.js' %}"></script>
+<!-- 动态菜单JS -->
+<script type="text/javascript"  src="{% static 'js/menu.js' %}"></script>
+</head>
+
+<body>
+
+<div class="container">
+ <div class="cont-top">
+  <div class="companyname">趣多多</div>
+  <div class="cont-top-middle">
+   <ul>
+    <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon.png' %}">
+      </div>
+       <div class="top-txt">购物单</div>
+     </a>
+    </li>
+
+    <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon1.png' %}">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon1.png' %}">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon1.png' %}">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon1.png' %}">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+
+     <li>
+     <a href="#">
+      <div class="top-middle">
+       <img src="{% static 'img/icon1.png' %}">
+      </div>
+      <div class="top-txt">收款单</div>
+     </a>
+    </li>
+
+   </ul>
+  </div>
+  <div class="cont-top-rg">
+   <ul class="advanced-menu">
+    <li>
+     <div class="top-search">
+      <div class="t-s-l">
+       <span class="left-line"></span>
+       <input type="text" value="搜库存" class="search-type" disabled>
+       <span class="triangle-bottom"></span>
+      </div>
+      <div class="t-s-l">
+       <input type="text" placeholder="请输入商品编码或名称" class="search-dt" autocomplete="off">
+       <span class="right-line"></span>
+       <span class="right-icon"><img src="{% static 'img/search-icon.png' %}"></span>
+      </div>
+     </div>
+    </li>
+    <li class="default" style="position:relative;">
+     <span class="user"><img src="{% static 'img/user.png' %}"></span>
+     <a  href="#" class="special">{{username}}</a>
+     <span class="triangle-bottom" style="margin:6px 0 0 10px;"></span>
+     <div class="drop-down-wrap" style="width:180px;left:15px;display: none;">
+      <div class="drop-down">
+       <span class="triangle-border"></span>
+       <span class="triangle-bg"></span>
+       <ul class="del-ul">
+        <li><a href="#" class="hot">趣多多</a></li>
+        <li><a href="#">{{username}}</a></li>
+        <li><a href="#">操作日志</a></li>
+       </ul>
+      </div>
+     </div>
+    </li>
+   </ul>
+   <ul class="advanced-menu">
+    <li>
+     <a href="#"><img  src="{% static 'img/top-icon1.png' %}"></a>
+    </li>
+    <li>
+     <a href="#"><img  src="{% static 'img/top-icon2.png' %}"></a>
+    </li>
+    <li>
+     <a href="{% url 'Liuyan' %}"><img  src="{% static 'img/top-icon3.png' %}"></a>
+    </li>
+    <li>
+     <a href="#"><img  src="{% static 'img/top-icon4.png' %}"></a>
+    </li>
+    <li>
+     <a href="#"><img  src="{% static 'img/top-icon5.png' %}"></a>
+    </li>
+   </ul>
+  </div>
+ </div>
+ <div class="left-menu" style="height:949px;">
+  <div class="menu-list">
+   <ul>
+    <li class="menu-list-02">
+     <a href="#">
+     <p class="fumenu">订单管理</p>
+     </a>
+     <a>
+     </a>
+     <a class="list-p">
+      <a href="{% url 'Dindan:dd-ddgl' %}"><p class="fumenu" id="zcd15">订单汇总</p></a>
+      <a href="{% url 'Dindan:dd-zjdd' %}"><p class="fumenu" id="zcd14">增加订单</p></a>
+      <a href="{% url 'Dindan:dd-shdd' %}"><p class="fumenu" id="zcd16">审核订单</p></a>
+     </a>
+    </li>
+    <li class="menu-list-02" >
+     <a href="#">
+     <p class="fumenu">客户管理</p>
+     </a>
+     <a class="list-p">
+      <a href="{% url 'Kehu:khgl' %}"><p class="fumenu" >客户列表</p></a>
+      <a href="{% url 'Kehu:khxx' %}"><p class="fumenu" >增加客户</p></a>
+     </a>
+    </li></ul>
+  </div>
+ </div>
+
+ <div class="right-menu">
+  <div class="main-hd">
+   <div class="page-teb" >
+    <div class="l-tab-links">
+     <ul style="left:0;">
+      <li class="l-select">
+       <a href="#"  style="padding:0px 25px;">首页</a>
+      </li>
+       <li class="l-select">
+       <a href="#">增加订单</a>
+
+      </li>
+     </ul>
+    </div>
+        <div class="l-tab-content" style="background:#fff;">
+     <div class="tab-content-item">
+      <div class="home">
+      <!--订单增加   开始-->
+       <form action="dd-zjdd" method="POST">
+        <div class="con-header">
+         <div class="header-rg">
+          <div class="ident">
+
+           <label>录制时间：</label>
+           <label>{{SH.time}}</label>
+          </div>
+          <div class="ident">
+           <label>单据编号：</label>
+           <label>{{SH.djbh}}</label>
+          </div>
+         </div>
+        </div>
+        <div class="yg-gl">
+         <div class="layoutgr ckd">
+          <ul>
+           <li>
+            <label class="ck">订货时间</label>
+            <label class="ck">{{SH.dhsj}}</label>
+           </li>
+           <li>
+            <label class="ck">订货单位</label>
+            <label class="ck">{{SH.dhdw}}</label>
+           </li>
+          </ul>
+         </div>
+         <div class="yg-tab">
+          <div class="grid">
+          <div class="layoutitem" style="width:100%;border:none;">
+            <table class="gridbar bar" border="1" cellpadding="0" cellspacing="0">
+            <thead>
+             <tr>
+              <th >编号</th>
+              <th >商品编号</th>
+              <th>商品名称</th>
+              <th>数量</th>
+              <th>单价</th>
+              <th>总金额</th>
+             </tr>
+             <tr>
+              <td>1</td>
+              <td>{{SH.spbh}}</td>
+              <td>{{SH.spm}}</td>
+              <td>{{SH.sl}}</td>
+              <td>{{SH.dj}}</td>
+              <td>{{SH.je}}</td>
+             </tr>
+             </thead>
+            </table>
+
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="cellspacing">
+           <div class="cell-zd">
+            <li><label class="ck">制单人：</label>
+            <label class="ck">制单</label>
+            </li>
+           </div>
+           <div class="cell-je">
+            <input type="hidden" value="1" name="sh">
+            <input type="submit"style="width:60px; height:40px;
+      background:#2d26f9;border-radius:3px;text-align:center;color:#fff;" value="审核">
+           </div>
+          </div>
+      <!--出款单   结束-->
+        </form>
+      <!--出款单   结束-->
+      </div>
+      
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+  
+</body>
+</html>
